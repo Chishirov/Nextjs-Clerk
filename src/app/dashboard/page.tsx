@@ -5,10 +5,10 @@ import React from 'react'
     const { userId } = auth();
     const user = await currentUser()
 
-    if(!userId){
+    if(!userId && !user){
         return <div>You are not logged in</div>
     }
-    console.log(user)
+   
   
   return (
     <div className= "mt-10 text-start  max-w-96 mx-auto bg-neutral-200 p-5 rounded flex flex-col justify-center items-center">
